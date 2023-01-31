@@ -1,0 +1,432 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style Body */
+body {
+  font-family: "Sen", sans-serif;
+  min-height: 5000px;
+}
+
+/* Style Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999999;
+  border-bottom: 0.5px solid #2d4059;
+  background-color: white;
+}
+
+/* Style Logo */
+.containerLogo {
+  font-weight: bolder;
+  padding: 30px;
+}
+
+.containerLogo h1 {
+  font-size: 200%;
+  color: #2d4059;
+  font-style: italic;
+  font-family: 'Righteous', cursive;
+}
+
+.containerLogo h1 span {
+  color: #ea5455;
+}
+
+/* Style Navigasi Utama */
+header nav ul {
+  padding-top: 10px;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 30px;
+  font-size: 120%;
+}
+
+header nav  ul li a {
+  text-decoration: none;
+  color: #2d4059;
+}
+
+header nav ul li a:hover {
+  color: #ea5455;
+  font-weight: 600;
+}
+
+header nav ul li a:focus {
+  color: #ea5455;
+  font-weight: 600;
+}
+
+header nav ul li a::after {
+  content: "";
+  border-bottom: 0.2px solid black;
+  display: block;
+  padding-bottom: 10%;
+  transition: 0.2s linear;
+  transform: scale(0);
+}
+
+header nav ul li a:hover::after {
+  transform: scale(0.7);
+}
+
+header nav ul li a:focus::after {
+  transform: scale(0.7);
+}
+
+/* Style Navigasi Lainnya */
+.navLainnya {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+#hamburgerNav {
+  font-size: 200%;
+  padding: 30px;
+  display: none;
+}
+
+.toggle {
+  border-radius: 30px;
+  width: 80px;
+  height: 30px;
+  margin-left: 30px;
+  background-color: #2d4059;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.circle {
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffff;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 50%);
+}
+
+/* Style Main Content*/
+
+
+/* Style Home */
+.home {
+  margin-top: 100px;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items:flex-start ;
+  padding-top: 100px;
+}
+
+.contentHome {
+  width: 50%;
+  padding-left: 40px;
+  padding-top: 100px;
+}
+
+.gambarHome img {
+  width: 700px;
+  height: 500px;
+}
+
+.contentHome h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #2d4059;
+  text-align: left;
+  font-family: 'Righteous', cursive;
+}
+
+.contactUs {
+  width: 100px;
+  padding: 10px;
+  background-color: #ea5455;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: 900;
+  margin-top: 30px;
+  font-family: "Sen", sans-serif;
+}
+
+.contactUs:hover {
+  background-color: #2d4059;
+  color: white;
+  cursor: pointer;
+  
+}
+
+.contentHome p {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+/* Style Responsif laptop*/
+@media  (max-width: 1200px) {
+  header nav ul li {
+    display: inline-block;
+    margin: 18px;
+    font-size: 95%;
+  }
+}
+
+/* Style Responsif Ipad*/
+@media  (max-width: 992px) {
+  header nav  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -900px;
+    width: 50%;
+    min-height: 1500px ;
+    background-color: #2d4059;
+    transition: 0.5s linear;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: center;
+    margin: 50px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    font-size: 30px;
+  }
+
+  #hamburgerNav {
+    display: block;
+  }
+
+  #hamburgerNav:hover {
+    color: #ea5455;
+  }
+
+  .popUp {
+   right: 0px; 
+  }
+
+  .navLainnya {
+    padding: 10px; 
+  }
+
+
+  header nav ul li a:hover::after {
+    border-bottom: 1px solid white;
+    transform: scale(0.2);
+  }
+
+  
+}
+
+/* Style Responsif tablet*/
+@media  (max-width: 768px) {
+  .containerLogo h1 {
+    font-size: 30px;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: center;
+    margin: 20px;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  .navLainnya {
+    padding-right: 40px;
+  }
+}
+
+/* Style Responsif Tablet Mini*/
+@media  (max-width: 576px) {
+
+  .containerLogo h1 {
+    font-size: 30px;
+  }
+
+  header nav ul li {
+    display: block;
+    text-align: center;
+    margin: 15px;
+  }
+
+  .containerLogo {
+    margin-right: -50px;
+    padding: 10px;
+  }
+
+  .navLainnya {
+    padding-right: 1px;
+  }
+
+  .navLainnya .toggle {
+    width: 50px;
+    height: 20px;
+  }
+
+  .navLainnya .toggle .circle {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Style Responsif Mobile */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .navLainnya {
+    padding-bottom: 0px;
+  }
+
+  .containerLogo {
+    padding-bottom: 0px;
+  }
+
+  .navLainnya .toggle {
+    width: 50px;
+    height: 20px;
+  }
+
+  .navLainnya .toggle .circle {
+    width: 20px;
+    height: 20px;
+  }
+}
