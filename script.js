@@ -10,3 +10,17 @@ document.addEventListener("click", function(e) {
         navigasi.classList.remove("popUp");
     }
 });
+
+//fungsi untuk dark mode 
+const toggle = document.getElementById("toggle");
+const semua = document.querySelector("html");
+const circle = document.getElementById("circle");
+const header = document.querySelector("header");
+const h1 = document.getElementsByTagName("a");
+
+
+toggle.addEventListener("click", function() {
+    toggle.classList.toggle("aktif");
+    semua.classList.toggle("dark");
+    header.classList.toggle("dark");    
+});
