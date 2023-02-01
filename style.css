@@ -158,7 +158,7 @@ header {
   font-size: 200%;
   color: #2d4059;
   font-style: italic;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
 }
 
 .containerLogo h1 span {
@@ -176,7 +176,7 @@ header nav ul li {
   font-size: 120%;
 }
 
-header nav  ul li a {
+header nav ul li a {
   text-decoration: none;
   color: #2d4059;
 }
@@ -239,7 +239,6 @@ header nav ul li a:focus::after {
   background-color: #ea5455;
 }
 
-
 .circle {
   border-radius: 30px;
   position: relative;
@@ -258,14 +257,13 @@ header nav ul li a:focus::after {
 
 /* Style Main Content*/
 
-
 /* Style Home */
 .home {
   margin-top: 100px;
   width: 100%;
   height: 800px;
   display: flex;
-  align-items:flex-start ;
+  align-items: flex-start;
   padding-top: 100px;
   height: 550px;
 }
@@ -286,7 +284,7 @@ header nav ul li a:focus::after {
   font-weight: bolder;
   color: #2d4059;
   text-align: left;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
 }
 
 .contactUs {
@@ -302,22 +300,91 @@ header nav ul li a:focus::after {
   text-decoration: none;
 }
 
-
 .contactUs:hover {
   background-color: #2d4059;
   color: white;
   cursor: pointer;
 }
 
-
-
 .contentHome p {
   font-size: 25px;
   margin-top: 20px;
 }
 
+/* Style About */
+.about {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 120px;
+}
+
+.about .aboutUs {
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+  color: #2d4059;
+  font-family: "righteous", cursive;
+}
+
+.about .descriptionAbout {
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+  padding: 0px 20px;
+}
+.about .dataDiri {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about .dataDiri div {
+  margin: 50px;
+}
+
+.about .dataDiri div img {
+  width: 250px;
+  height: 230px;
+  border-radius: 200px;
+  border: 5px solid black;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 25%);
+}
+
+.about .dataDiri div h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #ea5455;
+  margin: 10px auto;
+  transition: 0.2s linear;
+}
+
+.about .dataDiri .profile:hover {
+  margin-top: 20px;
+}
+
+.about .dataDiri .profile:hover h1 {
+  color: blueviolet;
+}
+
+.about .dataDiri .profile:hover h3 {
+  color: blueviolet;
+}
+
+.about .dataDiri .profile {
+  transition: 0.2s linear;
+}
+
+.about .dataDiri div h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 10px auto;
+  transition: 0.2s linear;
+}
+
 /* Style Responsif laptop*/
-@media  (max-width: 1200px) {
+@media (max-width: 1200px) {
   header nav ul li {
     display: inline-block;
     margin: 18px;
@@ -339,14 +406,14 @@ header nav ul li a:focus::after {
 }
 
 /* Style Responsif Ipad*/
-@media  (max-width: 992px) {
-  header nav  {
+@media (max-width: 992px) {
+  header nav {
     position: absolute;
     top: 0;
     bottom: 0;
     right: -900px;
     width: 50%;
-    min-height: 1500px ;
+    min-height: 1500px;
     background-color: #2d4059;
     transition: 0.5s linear;
   }
@@ -356,7 +423,7 @@ header nav ul li a:focus::after {
     text-align: center;
     margin: 50px;
   }
-  
+
   header nav ul li a {
     color: white;
     font-size: 30px;
@@ -373,14 +440,13 @@ header nav ul li a:focus::after {
   }
 
   .popUp {
-   right: 0px; 
-   z-index: 99999;
+    right: 0px;
+    z-index: 99999;
   }
 
   .navLainnya {
-    padding: 10px; 
+    padding: 10px;
   }
-
 
   header nav ul li a:hover::after {
     border-bottom: 1px solid white;
@@ -400,11 +466,13 @@ header nav ul li a:focus::after {
     font-size: 23px;
   }
 
-  
+  .about .dataDiri {
+    flex-wrap: wrap;
+  }
 }
 
 /* Style Responsif tablet*/
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .containerLogo h1 {
     font-size: 30px;
   }
@@ -461,8 +529,7 @@ header nav ul li a:focus::after {
 }
 
 /* Style Responsif Tablet Mini*/
-@media  (max-width: 576px) {
-
+@media (max-width: 576px) {
   .containerLogo h1 {
     font-size: 30px;
   }
@@ -520,6 +587,10 @@ header nav ul li a:focus::after {
     font-size: 20px;
     text-align: center;
   }
+
+  .about .descriptionAbout {
+    font-size: 20px;
+  }
 }
 
 /* Style Responsif Mobile */
@@ -557,5 +628,9 @@ header nav ul li a:focus::after {
 
   .contentHome p {
     font-size: 12px;
+  }
+
+  .about .descriptionAbout {
+    font-size: 15px;
   }
 }
