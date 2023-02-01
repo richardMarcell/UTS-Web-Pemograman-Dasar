@@ -132,10 +132,12 @@ html {
 body {
   font-family: "Sen", sans-serif;
   min-height: 5000px;
+  background-color: #fff;
 }
 
 /* Style Header */
 header {
+  background-color: #ffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,7 +147,6 @@ header {
   left: 0;
   z-index: 9999999;
   border-bottom: 0.5px solid #2d4059;
-  background-color: white;
 }
 
 /* Style Logo */
@@ -154,14 +155,14 @@ header {
   padding: 30px;
 }
 
-.containerLogo h1 {
+#logo1 {
   font-size: 200%;
-  color: #2d4059;
   font-style: italic;
   font-family: "Righteous", cursive;
+  color: #2d4059;
 }
 
-.containerLogo h1 span {
+#logo2 {
   color: #ea5455;
 }
 
@@ -234,11 +235,6 @@ header nav ul li a:focus::after {
   transition: 0.2s linear;
 }
 
-.aktif {
-  justify-content: end;
-  background-color: #ea5455;
-}
-
 .circle {
   border-radius: 30px;
   position: relative;
@@ -249,11 +245,7 @@ header nav ul li a:focus::after {
   transition: 0.5s linear;
 }
 
-.dark {
-  color: white;
-  background-color: #2d4059;
-  transition: 0.2s linear;
-}
+
 
 /* Style Main Content*/
 
@@ -270,7 +262,7 @@ header nav ul li a:focus::after {
 
 .contentHome {
   width: 50%;
-  padding-left: 40px;
+  padding-left: 3%;
   padding-top: 100px;
 }
 
@@ -313,8 +305,7 @@ header nav ul li a:focus::after {
 
 /* Style About */
 .about {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 1%;
   padding-top: 120px;
 }
 
@@ -324,13 +315,14 @@ header nav ul li a:focus::after {
   text-align: center;
   color: #2d4059;
   font-family: "righteous", cursive;
+  margin-bottom: 20px;
 }
 
 .about .descriptionAbout {
-  font-size: 25px;
+  font-size: 24px;
   text-align: center;
-  margin: 10px;
-  padding: 0px 20px;
+  margin: 0px 10px 10px 10px;
+  padding: 0px 1%;
 }
 .about .dataDiri {
   display: flex;
@@ -344,20 +336,22 @@ header nav ul li a:focus::after {
 }
 
 .about .dataDiri div img {
-  width: 250px;
-  height: 230px;
-  border-radius: 200px;
-  border: 5px solid black;
-  margin-bottom: 20px;
-  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 25%);
+  width: 350px;
+  height: 330px;
+  margin: auto;
 }
 
 .about .dataDiri div h1 {
   font-size: 30px;
   font-weight: bolder;
-  color: #ea5455;
+  color: #2d4059;
   margin: 10px auto;
   transition: 0.2s linear;
+}
+.petik {
+  font-size: 96px;
+  font-family: "righteous", cursive;
+  margin-left: 200px;
 }
 
 .about .dataDiri .profile:hover {
@@ -365,11 +359,11 @@ header nav ul li a:focus::after {
 }
 
 .about .dataDiri .profile:hover h1 {
-  color: blueviolet;
+  color: #ea5455;
 }
 
 .about .dataDiri .profile:hover h3 {
-  color: blueviolet;
+  color: #ea5455;
 }
 
 .about .dataDiri .profile {
@@ -382,6 +376,74 @@ header nav ul li a:focus::after {
   margin: 10px auto;
   transition: 0.2s linear;
 }
+
+/* Style Product */
+.product {
+  margin-top: 100px;
+  padding-top: 110px;
+}
+
+.product .productHead {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #2d4059;
+  font-family: "righteous", cursive;
+}
+
+.product .productList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product .productList .productBox {
+  border: 3px solid black;
+  margin: 50px;
+  border-radius: 5px;
+  display: flex;
+  width: 500px;
+}
+
+.product .productList .productBox img {
+  width: 300px;
+  height: 250px;
+}
+
+.product .productList .productBox .productDesc {
+  padding: 10px;
+  border-left: 1px solid black;
+}
+
+.product .productList .productBox .productDesc h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product .productList .productBox .productDesc .price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+/* kelas tambahan dark mode dan lainnya */
+.putih {
+  color: #fff;
+}
+
+.dark {
+  color: white;
+  background-color: #252525;
+  transition: 0.2s linear;
+}
+.aktif {
+  justify-content: end;
+  background-color: #ea5455;
+}
+
 
 /* Style Responsif laptop*/
 @media (max-width: 1200px) {
@@ -481,6 +543,10 @@ header nav ul li a:focus::after {
     display: block;
     text-align: center;
     margin: 20px;
+  }
+
+  .petik {
+    display: none;
   }
 
   header nav ul li a {
@@ -622,15 +688,39 @@ header nav ul li a:focus::after {
     height: 250px;
   }
 
+  .contentHome {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .contentHome h1 {
     font-size: 20px;
+    margin-left: 0px;
   }
 
   .contentHome p {
     font-size: 12px;
+    margin-left: 0px;
   }
 
   .about .descriptionAbout {
     font-size: 15px;
+  }
+  .product .productList .productBox img {
+    width: 200px;
+    height: 100%;
+  }
+
+  .product .productHead {
+    font-size: 35px;
+  }
+
+  .product .productList .productBox .productDesc h1 {
+    font-size: 20px;
+  }
+
+  .product .productList .productBox .productDesc p {
+    font-size: 10px;
   }
 }

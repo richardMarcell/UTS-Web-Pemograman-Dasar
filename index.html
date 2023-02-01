@@ -18,6 +18,13 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"
+      integrity="sha512-fTTVSuY9tLP+l/6c6vWz7uAQqd1rq3Q/GyKBN2jOZvJSLC5RjggSdboIFL1ox09/Ezx/AKwcv/xnDeYN9+iDDA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- Font Asset -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +41,7 @@
     <header id="header">
       <!-- logo -->
       <div class="containerLogo">
-        <h1>Toko<span>Ajun</span></h1>
+        <h1 id="logo1">Toko<span id="logo2">Ajun</span></h1>
       </div>
       <!-- Navigasi -->
       <nav id="navigasi">
@@ -60,7 +67,7 @@
       <!-- Home -->
       <div class="home" id="home">
         <div class="contentHome">
-          <h1>Menyediakan Kebutuhan Anda Dengan Harga Terjangkau</h1>
+          <h1 id="logo">Menyediakan Kebutuhan Anda Dengan Harga Terjangkau</h1>
 
           <p>
             Belanja Produk Berkualitas Tanpa Ribet, Solusi Ideal Untuk Memenuhi
@@ -79,22 +86,27 @@
       <!-- About -->
       <div class="about" id="about">
         <h1 class="aboutUs">About Us</h1>
-        <p class="descriptionAbout">Kami adalah Mahasiswa dari Institut Teknologi dan Bisnis Sabda Setia dari jurusan Sistem dan Teknolgi Informasi, yang mana kami masih menjalani pendidikan di semester dua</p>
+        <p class="petik">&ldquo;</p>
+        <p class="descriptionAbout">
+          Kami adalah Mahasiswa dari Institut Teknologi dan Bisnis Sabda Setia
+          dari jurusan Sistem dan Teknolgi Informasi, yang mana kami masih
+          menjalani pendidikan di semester dua
+        </p>
         <div class="dataDiri">
           <div class="profile">
-            <img src="img/richard.jpg" alt="gambar richard" />
+            <img src="img/Richard.svg" alt="gambar richard" />
             <h1>Richard Marcell</h1>
             <h1>2210001</h1>
             <h3>Back End Developer</h3>
           </div>
           <div class="profile">
-            <img src="img/agustianto.jpg" alt="gambar agustianto" />
+            <img src="img/Agustianto.svg" alt="gambar agustianto" />
             <h1>Agustianto</h1>
             <h1>2210002</h1>
             <h3>UI/UX Designer</h3>
           </div>
           <div class="profile">
-            <img src="img/steven.jpg" alt="gambar Steven" />
+            <img src="img/Steven.svg" alt="gambar Steven" />
             <h1>Steven</h1>
             <h1>2210007</h1>
             <h3>Front End Developer</h3>
@@ -104,11 +116,98 @@
 
       <!-- Product -->
       <div class="product" id="product">
-        
+        <h1 class="productHead">Product</h1>
+        <div class="productList">
+          <div class="productBox">
+            <img src="img/lada.jpg" alt="gambar lada" />
+            <div class="productDesc">
+              <h1>Lada Putih</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus et minima quas eum earum. Quasi non delectus facere
+                quidem veritatis?
+              </p>
+              <br /><br />
+              <h2 class="price">RPxxxxx</h2>
+            </div>
+          </div>
+
+          <div class="productBox">
+            <img src="img/minyak.jpg" alt="gambar minyak goreng" />
+            <div class="productDesc">
+              <h1>Minyak Goreng</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus et minima quas eum earum. Quasi non delectus facere
+                quidem veritatis?
+              </p>
+              <br /><br />
+              <h2 class="price">RPxxxxx</h2>
+            </div>
+          </div>
+
+          <div class="productBox">
+            <img src="img/sabun.jpg" alt="gambar sabun" />
+            <div class="productDesc">
+              <h1>Sabun Cuci Piring</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus et minima quas eum earum. Quasi non delectus facere
+                quidem veritatis?
+              </p>
+              <br /><br />
+              <h2 class="price">RPxxxxx</h2>
+            </div>
+          </div>
+
+          <div class="productBox">
+            <img src="img/sambal.jpg" alt="gambar sambal" />
+            <div class="productDesc">
+              <h1>Saus Sambal</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus et minima quas eum earum. Quasi non delectus facere
+                quidem veritatis?
+              </p>
+              <br /><br />
+              <h2 class="price">RPxxxxx</h2>
+            </div>
+          </div>
+
+          <div class="productBox">
+            <img src="img/sampo.jpg" alt="gambar sampo" />
+            <div class="productDesc">
+              <h1>Sampo Mandi</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus et minima quas eum earum. Quasi non delectus facere
+                quidem veritatis?
+              </p>
+              <br /><br />
+              <h2 class="price">RPxxxxx</h2>
+            </div>
+          </div>
+
+          <div class="productBox">
+            <img src="img/tepung.jpg" alt="gambar tepung" />
+            <div class="productDesc">
+              <h1>Tepung Terigu</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Temporibus et minima quas eum earum. Quasi non delectus facere
+                quidem veritatis?
+              </p>
+              <br /><br />
+              <h2 class="price">RPxxxxx</h2>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Service -->
-      <div class="service" id="service"></div>
+      <div class="service" id="service">
+        <!-- <div class="animasi" id="animasi"></div> -->
+      </div>
 
       <!-- Footer -->
       <footer id="contact"></footer>
