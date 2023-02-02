@@ -131,7 +131,6 @@ html {
 /* Style Body */
 body {
   font-family: "Sen", sans-serif;
-  min-height: 5000px;
   background-color: #fff;
 }
 
@@ -244,8 +243,6 @@ header nav ul li a:focus::after {
   box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 50%);
   transition: 0.5s linear;
 }
-
-
 
 /* Style Main Content*/
 
@@ -391,42 +388,108 @@ header nav ul li a:focus::after {
   font-family: "righteous", cursive;
 }
 
-.product .productList {
+
+
+/* Style Footer */
+
+#contact {
+  padding-left: 2%;
+  margin-top: 100px;
+  background-color: whitesmoke;
+  padding: 60px 10px;
+}
+
+.footerContent {
   display: flex;
-  justify-content: space-around;
+  margin-top: 20px;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
 
-.product .productList .productBox {
-  border: 3px solid black;
-  margin: 50px;
-  border-radius: 5px;
-  display: flex;
-  width: 500px;
-}
 
-.product .productList .productBox img {
-  width: 300px;
-  height: 250px;
-}
-
-.product .productList .productBox .productDesc {
-  padding: 10px;
-  border-left: 1px solid black;
-}
-
-.product .productList .productBox .productDesc h1 {
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.product .productList .productBox .productDesc .price {
+#copy {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
-  text-align: right;
+  margin-top: 50px;
+}
+
+#slogan {
+  font-size: 15px;
+  margin-top: 1%;
+}
+
+.footerKanan {
+  width: 75%;
+  height: 100%;
+}
+
+.footerKiri {
+  width: 25%;
+  height: 100%;
+  padding: 10px;
+  
+}
+
+.footerKanan .navigasiTambahan {
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+}
+
+.footerKanan .navigasiTambahan a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0px 50px;
+  font-size: 20px;
+}
+
+.footerKanan .navigasiTambahan a:hover {
+  color: #ea5455;
+  cursor: pointer;
+}
+
+.dataKontak {
+  margin-left: 45px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.dataKontak .kontak1, .kontak2 {
+  text-align: left;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.kontak1 {
+  border-top: 5px solid black;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.kontak1 a {
+  color: #252525;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.kontak1 a:hover {
+  color: #ea5455;
+  cursor: pointer;
+}
+
+.kontak2 a {
+  text-decoration: none;
+  color: #2d4059;
+  margin-right: 20px;
+}
+
+.kontak2 a:hover {
+  color: #ea5455;
+  cursor: pointer;
 }
 
 /* kelas tambahan dark mode dan lainnya */
@@ -443,7 +506,6 @@ header nav ul li a:focus::after {
   justify-content: end;
   background-color: #ea5455;
 }
-
 
 /* Style Responsif laptop*/
 @media (max-width: 1200px) {
@@ -707,20 +769,5 @@ header nav ul li a:focus::after {
   .about .descriptionAbout {
     font-size: 15px;
   }
-  .product .productList .productBox img {
-    width: 200px;
-    height: 100%;
-  }
-
-  .product .productHead {
-    font-size: 35px;
-  }
-
-  .product .productList .productBox .productDesc h1 {
-    font-size: 20px;
-  }
-
-  .product .productList .productBox .productDesc p {
-    font-size: 10px;
-  }
+  
 }
