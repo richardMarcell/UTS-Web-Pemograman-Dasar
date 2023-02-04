@@ -26,10 +26,18 @@ toggle.addEventListener("click", function (e) {
 });
 
 // fungsi untuk menjalankan animasi
-// const animation = lottie.loadAnimation({
-//     container: document.getElementById('animasi'),
-//     renderer: 'svg',
-//     loop: true,
-//     autoplay: true,
-//     path: 'asset/delivery-boy-5605460.json'
-//   });
+const animation1 = lottie.loadAnimation({
+    container: document.getElementById('animasi1'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'asset/delivery-boy-5605460.json'
+  });
+
+  const animation2 = lottie.loadAnimation({
+    container: document.getElementById('animasi2'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'asset/woman-shopping-online.json'
+  });

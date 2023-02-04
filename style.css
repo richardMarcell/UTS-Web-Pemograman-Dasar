@@ -1,773 +1,106 @@
-/* CSS Reset */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* Persiapan Default */
+:root {
+  --primary1: #2d4059;
+  --primary2: #ea5455;
+
+  --font1: "Sen", sans-serif;
+  --font2: "Righteous", cursive;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Style Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
 body {
-  font-family: "Sen", sans-serif;
-  background-color: #fff;
+  font-family: var(--font1);
+  color: var(--primary1);
 }
 
 /* Style Header */
 header {
-  background-color: #ffff;
   display: flex;
   justify-content: space-between;
+  padding: 1%;
   align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 9999999;
-  border-bottom: 0.5px solid #2d4059;
+  border-bottom: 0.5px solid black;
 }
 
-/* Style Logo */
-.containerLogo {
-  font-weight: bolder;
-  padding: 30px;
-}
-
-#logo1 {
-  font-size: 200%;
+header .containerLogo h1 {
+  font-family: var(--font2);
   font-style: italic;
-  font-family: "Righteous", cursive;
-  color: #2d4059;
 }
 
-#logo2 {
+header .containerLogo h1 span {
   color: #ea5455;
-}
-
-/* Style Navigasi Utama */
-header nav ul {
-  padding-top: 10px;
 }
 
 header nav ul li {
   display: inline-block;
-  margin: 30px;
-  font-size: 120%;
+  margin: 0px 30px;
 }
 
 header nav ul li a {
-  text-decoration: none;
   color: #2d4059;
+}
+
+header nav ul li a::after {
+  content: '';
+  border-bottom: 0.5px solid black;
+  display: block;
+  padding-bottom: 3px;
+  transform:scale(0);
+  transition: 0.2s linear;  
 }
 
 header nav ul li a:hover {
   color: #ea5455;
-  font-weight: 600;
-}
-
-header nav ul li a:focus {
-  color: #ea5455;
-  font-weight: 600;
-}
-
-header nav ul li a::after {
-  content: "";
-  border-bottom: 0.2px solid black;
-  display: block;
-  padding-bottom: 10%;
-  transition: 0.2s linear;
-  transform: scale(0);
+  font-weight: bolder;
 }
 
 header nav ul li a:hover::after {
   transform: scale(0.7);
 }
 
-header nav ul li a:focus::after {
-  transform: scale(0.7);
-}
-
-/* Style Navigasi Lainnya */
-.navLainnya {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-}
-
-#hamburgerNav {
-  font-size: 200%;
-  padding: 30px;
+.navLainnya span {
   display: none;
 }
 
-.toggle {
-  border-radius: 30px;
-  width: 80px;
-  height: 30px;
-  margin-left: 30px;
+.navLainnya .toggle {
+  width: 100px;
   background-color: #2d4059;
-  padding: 5px;
+  height: 40px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
-  transition: 0.2s linear;
+  justify-content: flex-start;
 }
 
-.circle {
-  border-radius: 30px;
-  position: relative;
+.navLainnya .toggle p {
   width: 30px;
   height: 30px;
-  background-color: #ffff;
-  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 50%);
-  transition: 0.5s linear;
+  background-color: aliceblue;
+  border-radius: 50px;
+  margin-left: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 25%);
 }
 
-/* Style Main Content*/
 
+
+
+
+/* Style Main */
 /* Style Home */
-.home {
-  margin-top: 100px;
-  width: 100%;
-  height: 800px;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 100px;
-  height: 550px;
-}
-
-.contentHome {
-  width: 50%;
-  padding-left: 3%;
-  padding-top: 100px;
-}
-
-.gambarHome img {
-  width: 700px;
-  height: 500px;
-}
-
-.contentHome h1 {
-  font-size: 50px;
-  font-weight: bolder;
-  color: #2d4059;
-  text-align: left;
-  font-family: "Righteous", cursive;
-}
-
-.contactUs {
-  width: 100px;
-  padding: 10px;
-  background-color: #ea5455;
-  text-align: center;
-  border-radius: 20px;
-  font-weight: 900;
-  margin-top: 30px;
-  font-family: "Sen", sans-serif;
-  color: black;
-  text-decoration: none;
-}
-
-.contactUs:hover {
-  background-color: #2d4059;
-  color: white;
-  cursor: pointer;
-}
-
-.contentHome p {
-  font-size: 25px;
-  margin-top: 20px;
-}
-
 /* Style About */
-.about {
-  padding-right: 1%;
-  padding-top: 120px;
-}
-
-.about .aboutUs {
-  font-size: 50px;
-  font-weight: bolder;
-  text-align: center;
-  color: #2d4059;
-  font-family: "righteous", cursive;
-  margin-bottom: 20px;
-}
-
-.about .descriptionAbout {
-  font-size: 24px;
-  text-align: center;
-  margin: 0px 10px 10px 10px;
-  padding: 0px 1%;
-}
-.about .dataDiri {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.about .dataDiri div {
-  margin: 50px;
-}
-
-.about .dataDiri div img {
-  width: 350px;
-  height: 330px;
-  margin: auto;
-}
-
-.about .dataDiri div h1 {
-  font-size: 30px;
-  font-weight: bolder;
-  color: #2d4059;
-  margin: 10px auto;
-  transition: 0.2s linear;
-}
-.petik {
-  font-size: 96px;
-  font-family: "righteous", cursive;
-  margin-left: 200px;
-}
-
-.about .dataDiri .profile:hover {
-  margin-top: 20px;
-}
-
-.about .dataDiri .profile:hover h1 {
-  color: #ea5455;
-}
-
-.about .dataDiri .profile:hover h3 {
-  color: #ea5455;
-}
-
-.about .dataDiri .profile {
-  transition: 0.2s linear;
-}
-
-.about .dataDiri div h3 {
-  font-size: 20px;
-  font-weight: bolder;
-  margin: 10px auto;
-  transition: 0.2s linear;
-}
-
 /* Style Product */
-.product {
-  margin-top: 100px;
-  padding-top: 110px;
-}
-
-.product .productHead {
-  text-align: center;
-  font-size: 50px;
-  font-weight: bolder;
-  color: #2d4059;
-  font-family: "righteous", cursive;
-}
-
-
+/* Style Service */
 
 /* Style Footer */
-
-#contact {
-  padding-left: 2%;
-  margin-top: 100px;
-  background-color: whitesmoke;
-  padding: 60px 10px;
-}
-
-.footerContent {
-  display: flex;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-
-
-#copy {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 50px;
-}
-
-#slogan {
-  font-size: 15px;
-  margin-top: 1%;
-}
-
-.footerKanan {
-  width: 75%;
-  height: 100%;
-}
-
-.footerKiri {
-  width: 25%;
-  height: 100%;
-  padding: 10px;
-  
-}
-
-.footerKanan .navigasiTambahan {
-  margin-bottom: 5px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: baseline;
-}
-
-.footerKanan .navigasiTambahan a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0px 50px;
-  font-size: 20px;
-}
-
-.footerKanan .navigasiTambahan a:hover {
-  color: #ea5455;
-  cursor: pointer;
-}
-
-.dataKontak {
-  margin-left: 45px;
-  width: 100%;
-  padding-top: 10px;
-}
-
-.dataKontak .kontak1, .kontak2 {
-  text-align: left;
-  margin: 20px auto;
-  width: 100%;
-}
-
-.kontak1 {
-  border-top: 5px solid black;
-  padding-top: 10px;
-  font-size: 20px;
-}
-
-.kontak1 a {
-  color: #252525;
-  text-decoration: none;
-  font-weight: bolder;
-}
-
-.kontak1 a:hover {
-  color: #ea5455;
-  cursor: pointer;
-}
-
-.kontak2 a {
-  text-decoration: none;
-  color: #2d4059;
-  margin-right: 20px;
-}
-
-.kontak2 a:hover {
-  color: #ea5455;
-  cursor: pointer;
-}
-
-/* kelas tambahan dark mode dan lainnya */
-.putih {
-  color: #fff;
-}
-
-.dark {
-  color: white;
-  background-color: #252525;
-  transition: 0.2s linear;
-}
-.aktif {
-  justify-content: end;
-  background-color: #ea5455;
-}
-
-/* Style Responsif laptop*/
-@media (max-width: 1200px) {
-  header nav ul li {
-    display: inline-block;
-    margin: 18px;
-    font-size: 95%;
-  }
-
-  .gambarHome img {
-    width: 500px;
-    height: 400px;
-  }
-
-  .contentHome h1 {
-    font-size: 40px;
-  }
-
-  .contentHome p {
-    font-size: 25px;
-  }
-}
-
-/* Style Responsif Ipad*/
-@media (max-width: 992px) {
-  header nav {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -900px;
-    width: 50%;
-    min-height: 1500px;
-    background-color: #2d4059;
-    transition: 0.5s linear;
-  }
-
-  header nav ul li {
-    display: block;
-    text-align: center;
-    margin: 50px;
-  }
-
-  header nav ul li a {
-    color: white;
-    font-size: 30px;
-  }
-
-  #hamburgerNav {
-    display: block;
-    font-weight: bold;
-  }
-
-  #hamburgerNav:hover {
-    color: #ea5455;
-    cursor: pointer;
-  }
-
-  .popUp {
-    right: 0px;
-    z-index: 99999;
-  }
-
-  .navLainnya {
-    padding: 10px;
-  }
-
-  header nav ul li a:hover::after {
-    border-bottom: 1px solid white;
-    transform: scale(0.2);
-  }
-
-  .gambarHome img {
-    width: 480px;
-    height: 350;
-  }
-
-  .contentHome h1 {
-    font-size: 35px;
-  }
-
-  .contentHome p {
-    font-size: 23px;
-  }
-
-  .about .dataDiri {
-    flex-wrap: wrap;
-  }
-}
-
-/* Style Responsif tablet*/
-@media (max-width: 768px) {
-  .containerLogo h1 {
-    font-size: 30px;
-  }
-
-  header nav ul li {
-    display: block;
-    text-align: center;
-    margin: 20px;
-  }
-
-  .petik {
-    display: none;
-  }
-
-  header nav ul li a {
-    font-size: 20px;
-  }
-
-  .navLainnya {
-    padding-right: 40px;
-  }
-
-  .home {
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-    align-items: center;
-    height: 660px;
-  }
-
-  .gambarHome {
-    padding-bottom: 0px;
-    width: 600px;
-  }
-
-  .contentHome {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0px;
-    width: 600px;
-  }
-
-  .gambarHome img {
-    width: 600px;
-    height: 450px;
-  }
-
-  .contentHome h1 {
-    text-align: center;
-    font-size: 40px;
-  }
-
-  .contentHome p {
-    font-size: 25px;
-    text-align: center;
-  }
-}
-
-/* Style Responsif Tablet Mini*/
-@media (max-width: 576px) {
-  .containerLogo h1 {
-    font-size: 30px;
-  }
-
-  header nav ul li {
-    display: block;
-    text-align: center;
-    margin: 15px;
-  }
-
-  .containerLogo {
-    margin-right: -50px;
-    padding: 10px;
-  }
-
-  .navLainnya {
-    padding-right: 1px;
-  }
-
-  .navLainnya .toggle {
-    width: 50px;
-    height: 20px;
-  }
-
-  .navLainnya .toggle .circle {
-    width: 20px;
-    height: 20px;
-  }
-
-  .home {
-    height: 540px;
-  }
-  .gambarHome {
-    padding-bottom: 0px;
-    width: 600px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .gambarHome img {
-    width: 500px;
-    height: 350px;
-  }
-
-  .contentHome {
-    padding-right: 10px;
-  }
-
-  .contentHome h1 {
-    text-align: center;
-    font-size: 30px;
-  }
-
-  .contentHome p {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .about .descriptionAbout {
-    font-size: 20px;
-  }
-}
-
-/* Style Responsif Mobile */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .navLainnya {
-    padding-bottom: 0px;
-  }
-
-  .containerLogo {
-    padding-bottom: 0px;
-  }
-
-  .navLainnya .toggle {
-    width: 50px;
-    height: 20px;
-  }
-
-  .navLainnya .toggle .circle {
-    width: 20px;
-    height: 20px;
-  }
-
-  .home {
-    height: 450px;
-  }
-
-  .gambarHome img {
-    width: 350px;
-    height: 250px;
-  }
-
-  .contentHome {
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .contentHome h1 {
-    font-size: 20px;
-    margin-left: 0px;
-  }
-
-  .contentHome p {
-    font-size: 12px;
-    margin-left: 0px;
-  }
-
-  .about .descriptionAbout {
-    font-size: 15px;
-  }
-  
-}
