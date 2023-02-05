@@ -11,19 +11,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-//fungsi untuk dark mode
-const toggle = document.getElementById("toggle");
-const semua = document.querySelector("body");
-const circle = document.getElementById("circle");
-const header = document.querySelector("header");
-const logo1 = document.getElementById("logo1");
-const logo2 = document.getElementById("logo2");
 
-toggle.addEventListener("click", function (e) {
-  toggle.classList.toggle("aktif");
-  semua.classList.toggle("dark");
-  header.classList.toggle("dark");
-});
 
 // fungsi untuk menjalankan animasi
 const animation1 = lottie.loadAnimation({

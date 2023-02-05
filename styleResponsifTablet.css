@@ -1,6 +1,84 @@
 @media (max-width: 768px) {
-    html {
-        font-size: 62.5%;
-    }
-}
+  html {
+    font-size: 62.5%;
+  }
 
+  .navLainnya .toggle a {
+    font-size: 12px;
+  }
+
+  .navLainnya .toggle {
+    height: 30px;
+    width: 90px;
+    display: none;
+  }
+
+
+
+  header nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav {
+    position: fixed;
+    height: 300vh;
+    background-color: #2d4059;
+    top: 0;
+    right: -400px;
+    width: 200px;
+    padding-right: 200px;
+    transition: 0.2s linear;
+  }
+
+  header nav ul li a {
+    color: white;
+    font-size: 20px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .popUp {
+    right: 0;
+  }
+
+  #hamburgerNav {
+    display: block;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  #home {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin: auto;
+  }
+
+  #home .contentHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  #home .contentHome h1,p {
+    margin: 10px auto;
+  }
+
+  .dataDiri {
+    flex-wrap: wrap;
+  }
+
+  .petik {
+    display: none;
+  }
+
+  .dataDiri .descriptionAbout {
+    font-size: 10px;
+  }
+}
