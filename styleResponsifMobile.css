@@ -15,8 +15,68 @@
     }
 
     main {
-        margin-left: 40px;
-        width: 480px;
-        border: 1px solid black;
+        position: relative;
+        right: 0;
+        left: 0;
+        margin-left: 0;
+    }
+
+    input {
+        margin-right: 20px ;
+    }
+
+    .service .pickUp {
+        flex-wrap: wrap;
+    }
+
+    .service .delivery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contentDelivery h1 {
+        text-align: center;
+    }
+    
+    .contentDelivery p {
+        text-align: center;
+    }
+
+    .contentPickUp h1 {
+        text-align: center;
+    }
+    
+    .contentPickUp p {
+        text-align: center;
+    }
+
+    .footerTengahKiri {
+        flex-wrap: wrap;
+    }
+
+    .footerTengahKiri .navigasiTambahan {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .ourContact {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    main {
+        left: 40px;
+        right: 0px; 
+        background-color: white;
+    }
+
+    footer {
+        position: relative;
+        left: 40px;
+        right: 0px; 
     }
 }

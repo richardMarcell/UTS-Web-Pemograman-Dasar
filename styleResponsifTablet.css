@@ -81,4 +81,43 @@
   .dataDiri .descriptionAbout {
     font-size: 10px;
   }
+
+  .footerTengah .footerTengahKiri {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 100px;
+  }
+
+  .footerTengahKiri {
+    justify-content: center;
+  }
+
+  .footerTengahKanan {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  .footerBawah {
+    margin-top: 20px;
+  }
+
+  .footerTengahKanan input {
+    margin-top: 20px;
+  }
+
+  .footerTengahKanan {
+    text-align: center;
+  }
+
+  .footerTengah, .footerAtas, .footerBawah {
+    justify-content: center;
+  }
+  
+
+  .footerTengah {
+    flex-wrap: wrap;
+  }
 }
