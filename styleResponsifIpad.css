@@ -21,4 +21,19 @@
         width: 450px;
         height: 300px;
     }
+
+     .bannerProduct img {
+    display: none;
+  }
+
+  .contentKiri {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contentKiri a {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
 }
