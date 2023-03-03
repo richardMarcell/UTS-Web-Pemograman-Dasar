@@ -3,26 +3,30 @@
         font-size: 85%;
     }
 
-    #home .contentHome h1 {
+    #about .contentabout h1 {
         font-size: 35px;
     }
 
-    #home .contentHome p {
+    #about .contentabout p {
         font-size: 20px;
     }
 
-    #home .contentHome a {
+    #about .contentabout a {
         padding: 5px;
         font-size: 15px;
         width: 110px;
     }
 
-    #home .gambarHome img {
+    #about .gambarabout img {
         width: 450px;
         height: 300px;
     }
 
     .dataDiri .profile img {
         width: 250px;
+    }
+
+    #home {
+        height: 600px;
     }
 }

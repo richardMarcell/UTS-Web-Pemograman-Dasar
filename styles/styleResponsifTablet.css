@@ -13,7 +13,13 @@
     display: none;
   }
 
+  #home h1 {
+    font-size: 15px;
+  }
 
+  #home span {
+    font-size: 15px;
+  }
 
   header nav ul li {
     display: block;
@@ -51,14 +57,14 @@
     width: 100%;
   }
 
-  #home {
+  #about {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
     margin: auto;
   }
 
-  #home .contentHome {
+  #about .contentabout {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,21 +72,47 @@
     text-align: center;
   }
 
-  #home .contentHome h1,p {
+  #about .contentabout h1,p {
     margin: 10px auto;
   }
 
-  .dataDiri {
+
+  .pickUp h1, .pickUp p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .pickUp p {
+    font-size: 12px;
+  }
+
+  .delivery {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .pickUp {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .delivery p {
+    font-size: 12px;
+  }
+
+  .delivery h1, .delivery p {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .service .serviceBox {
+    display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    padding: 0px;
   }
 
-  .petik {
-    display: none;
-  }
-
-  .dataDiri .descriptionAbout {
-    font-size: 10px;
-  }
 
   .footerTengah .footerTengahKiri {
     width: 100%;
@@ -119,5 +151,22 @@
 
   .footerTengah {
     flex-wrap: wrap;
+    width: 400px;
   }
+
+  #home {
+    height: 400px;
+  }
+}
+
+@media (max-width: 630px) {
+  #home {
+    height: 320px;
+  }   
+}
+
+@media (max-width: 530px) {
+  #home {
+    height: 280px;
+  }   
 }

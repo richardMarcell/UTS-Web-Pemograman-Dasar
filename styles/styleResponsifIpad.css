@@ -1,29 +1,37 @@
 @media (max-width: 992px) {
-    html {
-        font-size: 75%;
-    }
+  html {
+    font-size: 75%;
+  }
 
-    #home .contentHome h1 {
-        font-size: 30px;
-    }
+  #about .contentabout h1 {
+    font-size: 30px;
+  }
 
-    #home .contentHome p {
-        font-size: 15px;
-    }
+  #about .contentabout p {
+    font-size: 15px;
+  }
 
-    #home .contentHome a {
-        padding: 5px;
-        font-size: 15px;
-        width: 110px;
-    }
+  #about .contentabout a {
+    padding: 5px;
+    font-size: 15px;
+    width: 110px;
+  }
 
-    #home .gambarHome img {
-        width: 450px;
-        height: 300px;
-    }
+  #about .gambarabout img {
+    width: 450px;
+    height: 300px;
+  }
 
-     .bannerProduct img {
+  .bannerProduct img {
     display: none;
+  }
+
+  #serviceHead {
+    font-size: 30px;
+  }
+
+  .service p {
+    font-size: 15px;
   }
 
   .contentKiri {
@@ -36,4 +44,6 @@
     text-align: center;
     width: 100%;
   }
+
+  
 }

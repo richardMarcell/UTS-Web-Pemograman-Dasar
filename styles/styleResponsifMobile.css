@@ -11,6 +11,18 @@
         font-size: 40px;
     }
 
+    #home h1 {
+        font-size: 30px;
+      }
+    
+      #home span {
+        font-size: 30px;
+      }
+
+      #home {
+        background-image: none;
+      }
+
     footer button {
         margin-left: 20px;
     }
@@ -89,6 +101,14 @@
         left: 40px;
         right: 0px; 
     }
+
+    #home h1 {
+        font-size: 25px;
+      }
+    
+      #home span {
+        font-size: 25px;
+      }
 
     
 }

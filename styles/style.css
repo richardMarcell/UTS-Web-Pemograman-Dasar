@@ -94,7 +94,7 @@ header nav ul li a:focus::after {
 
 .navLainnya .toggle {
   width: 100px;
-  background-color: #2d4059;
+  background-color: var(--primary2);
   height: 40px;
   border-radius: 20px;
   display: flex;
@@ -106,38 +106,96 @@ header nav ul li a:focus::after {
   font-size: 15px;
   color: white;
   font-weight: bold;
+  z-index: 99;
 }
+
+.navLainnya .toggle::before {
+  content: "";
+  background-color: #2d4059;
+  display: block;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 1;
+  transform: scalex(0);
+  transition: 0.2s linear;
+}
+
+.navLainnya .toggle:hover::before {
+  transform: scalex(1);
+}
+
 
 /* Style Main */
 main {
   width: 100%;
-  background-color: #F8FAFB;
+  background-color: #f8fafb;
 }
 
 /* Style Home */
 #home {
-  padding-top: 80px;
+  padding-top: 100px;
+  height: 1000px;
+  background-image: url("../img/backgroundHome.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+  height: 800px;
+  position: relative;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#home .kotakHome {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#home h1 {
+  z-index: 999;
+  font-family: var(--font2);
+  text-align: center;
+  font-size: 300%;
+  width: 100%;
+}
+#home span {
+  color: #ea5455;
+  text-align: center;
+  display: block;
+  font-family: var(--font2);
+  font-size: 300%;
+  font-weight: bolder;
+}
+
+/* Style About */
+#about {
+  padding-top: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.contentHome {
+.contentabout {
   padding-left: 20px;
   width: 600px;
 }
 
-#home .contentHome h1 {
+#about .contentabout h1 {
   font-family: var(--font2);
   font-size: 40px;
 }
 
-#home .contentHome p {
+#about .contentabout p {
   margin-top: 10px;
   font-size: 20px;
 }
 
-#home .contentHome a {
+#about .contentabout a {
   display: block;
   background-color: var(--primary2);
   padding: 10px;
@@ -150,77 +208,15 @@ main {
   transition: 0.2s linear;
 }
 
-#home .contentHome a:hover {
+#about .contentabout a:hover {
   color: white;
   background-color: #2d4059;
 }
 
-#home .gambarHome img {
+#about .gambarabout img {
   width: 600px;
   height: 400px;
 }
-
-/* Style About */
-#about {
-  width: 100%;
-  padding-top: 100px;
-}
-
-#about .aboutUs {
-  text-align: center;
-  font-family: var(--font2);
-  font-size: 40px;
-  font-weight: bolder;
-  color: var(--primary1);
-}
-
-.petik {
-  font-size: 100px;
-  text-align: left;
-  padding-left: 200px;
-  font-family: var(--font2);
-}
-
-.descriptionAbout {
-  font-size: 20px;
-  text-align: center;
-  padding: 0px 10px;
-}
-
-.dataDiri {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dataDiri .profile {
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  transition: 0.2s linear;
-}
-
-.dataDiri .profile h1 {
-  font-size: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-.dataDiri .profile h3 {
-  text-align: center;
-}
-
-.dataDiri .profile img {
-  padding-left: 20px;
-}
-
-.dataDiri .profile:hover {
-  color: var(--primary2);
-  margin-top: 0px;
-}
-
 
 /* Style Product */
 #product {
@@ -237,7 +233,7 @@ main {
 
 #product .bannerProduct {
   display: flex;
-  background-color: #EFDEC9;
+  background-color: #efdec9;
   width: 80%;
   margin: 10px auto;
   border-radius: 25px;
@@ -283,6 +279,7 @@ main {
 }
 
 .productList {
+  padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -292,34 +289,76 @@ main {
 
 .productList .productBox {
   margin: 10px 20px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 25%);
-  padding: 20px;
-  border-radius: 10px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 15%);
+  border-radius: 16px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  width: 400px;
-  background-color: #2d4059;
+  width: 300px;
+  height: 340px;
+  background-color: #fff;
 }
 
-.productList .productBox img {
+.gambarProduk {
   width: 100%;
-  height: 350px;
 }
 
-.productBox .productDesc {
+.gambarProduk img {
   width: 100%;
-  color: white;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
 }
 
-.productBox .desc1 {
+.productDetail {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 100%;
 }
+
+.productName {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.productDesc {
+  width: 100%;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.detail {
+  width: 100%;
+  display: flex;  
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.detail p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.detail button {
+  width: 100px;
+  padding: 5px;
+  font-weight: bold;
+  background-color: var(--primary2);
+  color: black;
+  border-radius: 20px;
+  transition: 0.3s linear;
+}
+
+.detail button:hover {
+  background-color: var(--primary1);
+  color: #fff;
+  cursor: pointer;
+}
+
 
 
 
@@ -331,6 +370,7 @@ main {
 
 .service #serviceHead {
   text-align: center;
+  font-size: 40px;
   font-family: var(--font2);
 }
 
@@ -348,7 +388,7 @@ main {
 }
 
 .delivery {
-  display: flex; 
+  display: flex;
   padding: 20px;
   width: 80%;
   align-items: center;
@@ -361,16 +401,17 @@ main {
   align-items: center;
 }
 
-.pickUp h1, .pickUp p {
+.pickUp h1,
+.pickUp p {
   text-align: right;
   margin-right: 30px;
 }
 
-.delivery h1, .delivery p {
+.delivery h1,
+.delivery p {
   margin-left: 30px;
   text-align: left;
 }
-
 
 /* Style Footer */
 footer {
@@ -386,7 +427,9 @@ footer {
   padding-right: 60px;
 }
 
-.footerAtas, .footerTengah, .footerBawah {
+.footerAtas,
+.footerTengah,
+.footerBawah {
   width: 100%;
 }
 
