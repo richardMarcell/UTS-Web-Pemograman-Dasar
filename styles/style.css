@@ -452,14 +452,14 @@ main {
 .delivery {
   display: flex;
   padding: 20px;
-  width: 80%;
+  width: 100%;
   align-items: center;
 }
 
 .pickUp {
   display: flex;
   flex-direction: row-reverse;
-  width: 80%;
+  width: 100%;
   align-items: center;
 }
 

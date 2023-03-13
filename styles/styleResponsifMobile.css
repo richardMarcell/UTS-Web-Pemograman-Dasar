@@ -3,9 +3,6 @@
         font-size: 55%;
     }
 
-    main {
-        margin: auto 20px;
-    }
 
     #serviceHead {
         font-size: 40px;
@@ -47,11 +44,16 @@
 
     .service .pickUp {
         flex-wrap: wrap;
+        width: 35%;
     }
 
     .service .delivery {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    #about .gambarabout img {
+        width: 400px;
     }
 
     .contentDelivery h1 {
@@ -60,6 +62,14 @@
     
     .contentDelivery p {
         text-align: center;
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .contentDelivery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .contentPickUp h1 {
@@ -91,14 +101,14 @@
 
 @media (max-width: 440px) {
     main {
-        left: 40px;
+        left: 0px;
         right: 0px; 
         background-color: white;
     }
 
     footer {
         position: relative;
-        left: 40px;
+        left: 0px;
         right: 0px; 
     }
 
