@@ -9,7 +9,22 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
 
 * {
   margin: 0;
@@ -46,10 +61,21 @@ header {
 header .containerLogo h1 {
   font-family: var(--font2);
   font-style: italic;
+  transition: 0.2s linear;
+}
+header .containerLogo h1:hover {
+  color: orange;
+  cursor: pointer;
 }
 
 header .containerLogo h1 span {
-  color: #ea5455;
+  color: var(--primary2);
+  transition: 0.2s;
+}
+
+header .containerLogo h1:hover span {
+  cursor: pointer;
+  color: orange;
 }
 
 header nav ul li {
@@ -58,7 +84,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #2d4059;
+  color: var(--primary1);
 }
 
 header nav ul li a::after {
@@ -71,7 +97,7 @@ header nav ul li a::after {
 }
 
 header nav ul li a:hover {
-  color: #ea5455;
+  color: var(--primary2);
   font-weight: bolder;
 }
 
@@ -80,7 +106,7 @@ header nav ul li a:hover::after {
 }
 
 header nav ul li a:focus {
-  color: #ea5455;
+  color: var(--primary2);
   font-weight: bolder;
 }
 
@@ -111,7 +137,7 @@ header nav ul li a:focus::after {
 
 .navLainnya .toggle::before {
   content: "";
-  background-color: #2d4059;
+  background-color: var(--primary1);
   display: block;
   width: 100px;
   height: 40px;
@@ -129,25 +155,27 @@ header nav ul li a:focus::after {
 
 /* Style Main */
 main {
-  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
   background-color: #f8fafb;
 }
 
 /* Style Home */
 #home {
   padding-top: 100px;
-  height: 1000px;
   background-image: url("../img/backgroundHome.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   object-fit: cover;
-  height: 800px;
+  height: 840px;
   position: relative;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  border-bottom: 1px solid #2d4059;
 }
 
 #home .kotakHome {
@@ -158,26 +186,37 @@ main {
 
 #home h1 {
   z-index: 999;
+  color: black;
   font-family: var(--font2);
   text-align: center;
   font-size: 300%;
   width: 100%;
 }
 #home span {
-  color: #ea5455;
+  color: var(--primary2);
   text-align: center;
+  font-style: italic;
   display: block;
   font-family: var(--font2);
   font-size: 300%;
   font-weight: bolder;
+  color: #2d4059;
+}
+
+#home span i {
+  color: #ea5455;
 }
 
 /* Style About */
 #about {
-  padding-top: 40px;
+  padding-left: 40px;
+  padding-top: 150px;
   display: flex;
+  padding-bottom: 150px;
+  background-color: white;
   align-items: center;
   justify-content: space-between;
+  height: 900px;
 }
 
 .contentabout {
@@ -210,7 +249,7 @@ main {
 
 #about .contentabout a:hover {
   color: white;
-  background-color: #2d4059;
+  background-color: var(--primary1);
 }
 
 #about .gambarabout img {
@@ -234,7 +273,7 @@ main {
 #product .bannerProduct {
   display: flex;
   background-color: #efdec9;
-  width: 80%;
+  width: 95%;
   margin: 10px auto;
   border-radius: 25px;
   justify-content: space-between;
@@ -254,7 +293,7 @@ main {
 
 .contentKiri h1 {
   font-size: 40px;
-  font-family: var(--font2);
+  font-family: var(--font1);
 }
 
 .contentKiri p {
@@ -266,16 +305,17 @@ main {
   background-color: var(--primary1);
   color: white;
   padding: 10px;
-  width: 100px;
+  width: 150px;
+  text-align: center;
   border-radius: 20px;
-  font-weight: 500;
+  font-weight: bold;
   margin-top: 50px;
   display: block;
   transition: 0.2s linear;
 }
 
 .contentKiri a:hover {
-  font-weight: bolder;
+  font-weight: 900;
 }
 
 .productList {
@@ -296,16 +336,36 @@ main {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 300px;
-  height: 340px;
+  height: 400px;
   background-color: #fff;
 }
+
+.productList > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.productList h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
 
 .gambarProduk {
   width: 100%;
 }
 
+
+
 .gambarProduk img {
   width: 100%;
+  height: 220px;
+  border-bottom: 1px solid black;
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
 }
@@ -336,6 +396,7 @@ main {
   padding-right: 20px;
   padding-left: 10px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .detail p {
@@ -366,6 +427,7 @@ main {
 .service {
   width: 100%;
   padding-top: 100px;
+  background-color: white;
 }
 
 .service #serviceHead {
@@ -403,8 +465,7 @@ main {
 
 .pickUp h1,
 .pickUp p {
-  text-align: right;
-  margin-right: 30px;
+  text-align: right; 
 }
 
 .delivery h1,
@@ -416,7 +477,7 @@ main {
 /* Style Footer */
 footer {
   width: 100%;
-  background-color: #fff;
+  background-color: #f8fafb;
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
@@ -464,7 +525,7 @@ footer {
 .footerTengahKiri .navigasiTambahan a {
   display: block;
   margin-top: 5px;
-  color: #2d4059;
+  color: var(--primary1);
   font-weight: lighter;
   transition: 0.2s linear;
 }
@@ -481,7 +542,7 @@ footer {
 
 .footerTengahKiri .navigasiTambahan a:hover {
   font-weight: bold;
-  color: #ea5455;
+  color: var(--primary2);
 }
 
 .ourContact a {
@@ -495,14 +556,14 @@ footer {
 }
 
 .ourContact a {
-  color: #2d4059;
+  color: var(--primary1);
   margin-top: 5px;
   transition: 0.2s linear;
 }
 
 .ourContact a:hover {
   font-weight: bold;
-  color: #ea5455;
+  color: var(--primary2);
 }
 
 .footerTengahKanan {
@@ -534,7 +595,7 @@ footer {
   border: none;
   padding: 10px;
   color: white;
-  background-color: #ea5455;
+  background-color: var(--primary2);
   border-radius: 10px;
   font-weight: bolder;
   transition: 0.2s linear;
@@ -542,7 +603,7 @@ footer {
 }
 
 .footerTengahKanan button:hover {
-  background-color: #2d4059;
+  background-color: var(--primary1);
   cursor: pointer;
 }
 

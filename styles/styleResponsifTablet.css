@@ -49,19 +49,27 @@
     right: 0;
   }
 
-  #hamburgerNav {
-    display: block;
+  .productList h1 {
+    font-size: 30px;
   }
 
-  main {
-    width: 100%;
+  #hamburgerNav {
+    display: block;
+    cursor: pointer;
+    transition: 0.2s linear;
   }
+
+  #hamburgerNav:hover {
+    color: #ea5455;
+  }
+
 
   #about {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
     margin: auto;
+    padding-left: 0;
   }
 
   #about .contentabout {
@@ -76,14 +84,37 @@
     margin: 10px auto;
   }
 
+  
+
+  .detail {
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  .detail p {
+    width: 100%;
+    text-align: center;
+  }
+
 
   .pickUp h1, .pickUp p {
-    margin-left: 0;
     text-align: center;
   }
 
   .pickUp p {
     font-size: 12px;
+    margin: 0px;
+  }
+
+  .contentDelivery {
+    width: 400px;
+    margin: auto;
+  }
+
+  .contentPickUp {
+    width: 400px;
+    margin: auto;
   }
 
   .delivery {
@@ -101,7 +132,7 @@
   }
 
   .delivery h1, .delivery p {
-    margin-left: 0px;
+    margin: 0px;
     text-align: center;
   }
 
